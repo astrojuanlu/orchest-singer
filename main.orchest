@@ -1,0 +1,107 @@
+{
+    "name": "Main",
+    "parameters": {},
+    "services": {
+        "postgres": {
+            "env_variables": {
+                "POSTGRES_HOST_AUTH_METHOD": "trust"
+            },
+            "image": "postgres",
+            "name": "postgres",
+            "order": 155,
+            "scope": [
+                "interactive",
+                "noninteractive"
+            ]
+        }
+    },
+    "settings": {
+        "auto_eviction": false,
+        "data_passing_memory_size": "1GB"
+    },
+    "steps": {
+        "1b613a84-b60d-4f8c-ba38-5974f8c62ddd": {
+            "environment": "cb1c78f9-5568-46c7-8410-182f1f4f7931",
+            "file_path": "tap.ipynb",
+            "incoming_connections": [
+                "75b2e9c1-8f0e-4291-ba91-e277bf7af704",
+                "b5d97586-e269-42e4-8478-4c73c8b16618"
+            ],
+            "kernel": {
+                "display_name": "Tap",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    283.5,
+                    169.24999999999997
+                ]
+            },
+            "parameters": {},
+            "title": "Extract data",
+            "uuid": "1b613a84-b60d-4f8c-ba38-5974f8c62ddd"
+        },
+        "75b2e9c1-8f0e-4291-ba91-e277bf7af704": {
+            "environment": "308dca48-b227-405f-938a-8edc9403cd30",
+            "file_path": "populate-database.ipynb",
+            "incoming_connections": [],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    20,
+                    258.5
+                ]
+            },
+            "parameters": {},
+            "title": "Populate database",
+            "uuid": "75b2e9c1-8f0e-4291-ba91-e277bf7af704"
+        },
+        "87febbfc-e659-436b-b06e-f2e52bc4d16c": {
+            "environment": "ea454eaf-1883-4158-89c2-f1813c949f57",
+            "file_path": "target.ipynb",
+            "incoming_connections": [
+                "1b613a84-b60d-4f8c-ba38-5974f8c62ddd"
+            ],
+            "kernel": {
+                "display_name": "Target",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    547,
+                    169.24999999999997
+                ]
+            },
+            "parameters": {},
+            "title": "Load data",
+            "uuid": "87febbfc-e659-436b-b06e-f2e52bc4d16c"
+        },
+        "b5d97586-e269-42e4-8478-4c73c8b16618": {
+            "environment": "308dca48-b227-405f-938a-8edc9403cd30",
+            "file_path": "generate-configs.ipynb",
+            "incoming_connections": [],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    20.000000000000018,
+                    80
+                ]
+            },
+            "parameters": {},
+            "title": "Generate config files",
+            "uuid": "b5d97586-e269-42e4-8478-4c73c8b16618"
+        }
+    },
+    "uuid": "b345c24a-4b3e-4dee-82d6-4241adcb403a",
+    "version": "1.0.0"
+}

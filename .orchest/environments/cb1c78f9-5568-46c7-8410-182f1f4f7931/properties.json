@@ -1,0 +1,1 @@
+{"name": "Tap", "language": "python", "gpu_support": false, "uuid": "cb1c78f9-5568-46c7-8410-182f1f4f7931", "base_image": "orchest/base-kernel-py"}
